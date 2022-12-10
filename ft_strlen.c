@@ -6,15 +6,18 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:49:36 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/06 20:50:39 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/09 17:16:21 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *s)
 {
-	if (!*s)
-		return (0);
-	return (1 + ft_strlen(s + 1));
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	i++;
+	return (i);
 }

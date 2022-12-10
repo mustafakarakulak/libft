@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 20:41:58 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/08 21:41:00 by mkarakul         ###   ########.fr       */
+/*   Created: 2022/12/09 18:06:43 by mkarakul          #+#    #+#             */
+/*   Updated: 2022/12/09 18:06:44 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*(s) != c && (*(s)) != '\0')
-	s++;
-	return ((char *)s);
+	char	*i;
+
+	i = 0;
+	while (*s)
+	{
+		if (*s == c)
+			i = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (i);
 }

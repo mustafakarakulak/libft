@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:48:01 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/06 20:49:28 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/09 18:07:12 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (i < len)
+	while (i <= len)
 	{
 		((unsigned char *)b)[i] = (unsigned char)c;
 		i++;
