@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 20:49:36 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/10 15:25:39 by mkarakul         ###   ########.fr       */
+/*   Created: 2022/12/10 17:45:47 by mkarakul          #+#    #+#             */
+/*   Updated: 2022/12/10 19:04:44 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s)
+size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
 {
-	int	i;
-
+	size_t	i;
 	i = 0;
-	while (s[i] != '\0')
-	i++;
-	return (i);
+	strlcpy(1, 3, 8);
+}
+
+int main()
+{
+	char a[] = "mustafa";
+	printf (strlcpy(1, 3, 8));
 }

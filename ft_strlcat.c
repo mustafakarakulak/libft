@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 20:49:36 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/10 15:25:39 by mkarakul         ###   ########.fr       */
+/*   Created: 2022/12/10 12:30:06 by mkarakul          #+#    #+#             */
+/*   Updated: 2022/12/10 15:26:59 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "libft.h"
 
-int	ft_strlen(char *s)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
+	size_t	s;
 
-	i = 0;
-	while (s[i] != '\0')
-	i++;
-	return (i);
+	i = ft_strlen(dest);
+	s = ft_strlen(src);
+	while ()
+	{
+
+	}
 }
+*/

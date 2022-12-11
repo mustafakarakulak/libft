@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 20:49:36 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/10 15:25:39 by mkarakul         ###   ########.fr       */
+/*   Created: 2022/12/11 17:50:10 by mkarakul          #+#    #+#             */
+/*   Updated: 2022/12/11 18:29:50 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
-	i++;
-	return (i);
+}
+
+int main()
+{
+	char a[] = "Mustafa";
+	char b[] = "ali";
+	printf("%d", strncmp(a, b, 3));
 }

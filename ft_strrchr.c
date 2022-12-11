@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 18:06:43 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/09 18:06:44 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/10 17:45:21 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 			i = (char *)s;
 		s++;
 	}
-	if (c == '\0')
+	if (c == NULL)
 		return ((char *)s);
 	return (i);
 }
