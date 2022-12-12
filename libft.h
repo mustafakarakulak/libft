@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:40:22 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/11 17:48:59 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:54:19 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+
+int	ft_atoi(const char *str);
 
 void	ft_bzero(void *s, size_t n);
 
@@ -34,10 +36,6 @@ char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 int		ft_strlen(char *s);
 
-size_t	ft_strlcpy(char *restrict dst, const \
-		char *restrict src, size_t dstsize);
-
-char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char	*s1, const char	*s2, size_t	len);
 
 int		ft_toupper(int c);
