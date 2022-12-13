@@ -1,4 +1,4 @@
-c_dos	= $(wildcard ft_b*.c ft_i*.c ft_t*.c ft_s*.c ft_m*.c ft_a*.c)
+c_dos	= $(wildcard ft_b*.c ft_i*.c ft_t*.c ft_s*.c ft_m*.c ft_a*.c ft_c*.c)
 
 o_dos	= $(c_dos:.c=.o)
 

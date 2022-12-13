@@ -6,38 +6,27 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:54:37 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/10 16:00:37 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/13 20:10:46 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	main(void)
-{/*
-	int a[] = {518, 518, 2560, 4, 5};
+{
+	char x[] = "mustafa";
+	char y[] = "bilgisayar";
+	char z[] = "serif";
+	char v[] = "    -123";
+	char u[] = "mus";
+	int i = 'a';
+	char p[] = "MUSTAFA";
 
-	unsigned	char data;
-
-	ft_bzero(a, 5);
-	int	i = 0;
-	while (i < sizeof(a))
-	{
-		if (i % 4 == 0)
-			printf("\n");
-		data = *((unsigned char *)a + i);
-		printf("%03hhu ", data);
-		i++;
-	}
-	printf("\n");
-	printf("%d\n", *a);
-
-	
-	char a[] = "mustafa";
-	int b[] = {1, 2, 3, 5};
-
-	printf(ft_memset())
-	*/
-	char	dest[] = "mustafa";
-	char	src[] = "ali";
-	printf("MUSTAFA KARAKULAK qweeqw");
+	printf("%d\n", ft_strncmp(x, u, 3));
+	printf("%d\n", ft_isdigit(i));
+	printf("%s\n", ft_memmove(y, z, 5));
+	printf("%d\n", ft_atoi(v));
+	printf("%zu\n", ft_strlcat(v, x, 3));
+	printf("%d\n", ft_toupper(i));
+	printf("%d\n", ft_tolower(i));
 }
