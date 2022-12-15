@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:40:22 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/13 16:23:25 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/15 17:05:31 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 #endif

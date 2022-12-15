@@ -6,30 +6,37 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:49:41 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/13 16:24:20 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/15 14:51:47 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
-	int			fl;
-	long long	val;
+	long	i;
+	long	mult;
+	long	number;
 
-	fl = 1;
-	val = 0;
-	while (*str <= 32)
-		str++;
-	if (*str == '-')
-		fl = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (ft_isdigit(*str))
+	i = 0;
+	mult = 1;
+	number = 0;
+	if (nptr[0] == '\0')
+		return (i);
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\f' || \
+			nptr[i] == '\r' || nptr[i] == '\n' || nptr[i] == '\v')
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		val = val * 10 + (*str - '0');
-		str++;
+		if (nptr[i] == '-')
+			mult *= -1;
+		i++;
 	}
-	val = fl == 1 ? val : -val;
-	return (val);
+	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		number = number * 10 + (nptr[i] - 48);
+		i++;
+	}
+	number *= mult;
+	return (number);
 }
