@@ -6,11 +6,11 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 20:41:58 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/08 21:41:00 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:53:20 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*(s) != c && (*(s)) != '\0')
 	s++;
