@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 19:34:31 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/18 19:52:45 by mkarakul         ###   ########.fr       */
+/*   Created: 2022/12/18 05:27:06 by mkarakul          #+#    #+#             */
+/*   Updated: 2022/12/18 07:06:43 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		in;
-	int		i2;
-	char	*ptr;
-
-	if (!s1 || !s2)
-		return (NULL);
-	ptr = malloc(sizeof (char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!ptr)
-		return (NULL);
-	in = 0;
-	i2 = 0;
-	while (s1[in])
-		ptr[i2++] = s1[in++];
-	in = 0;
-	while (s2[in])
-		ptr[i2++] = s2[in++];
-	ptr[i2] = '\0';
-	return (ptr);
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
+	}
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n * -1, fd);
+	}
+	else if (n < 10)
+		ft_putchar_fd((char)(n + '0'), fd);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
 }

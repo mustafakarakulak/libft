@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:44:10 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/13 16:03:27 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/18 19:48:34 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 	i = 0;
 	count = 0;
-	if (!dest || !src)
-		return (0);
 	while (src[count])
 		count++;
 	while (src[i] && i + 1 < size)

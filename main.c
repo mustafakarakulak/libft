@@ -6,16 +6,15 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:54:37 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/16 19:59:40 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/17 18:50:42 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main()
+int main()
 {
-	char x[] = "mustafa";
-	char y[] = "serifali";
-	
-	printf("%s\n", ft_strjoin(x, y));
+  char a[] = "    Mustafa    ";
+  char b[] = " ";
+  printf("%s", ft_strtrim(a, b));
 }
