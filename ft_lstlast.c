@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 14:55:23 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/20 13:40:46 by mkarakul         ###   ########.fr       */
+/*   Created: 2022/12/20 13:36:34 by mkarakul          #+#    #+#             */
+/*   Updated: 2022/12/20 13:37:06 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*lst;
+	t_list	*temp;
 
-	lst = malloc(sizeof(t_list));
 	if (lst == NULL)
 		return (NULL);
-	lst->content = content;
-	lst->next = NULL;
-	return (lst);
+	temp = lst;
+	while (temp -> next != NULL)
+			temp = temp -> next;
+	return (temp);
 }
-
 /*
-int	main()
+int main()
 {
 	t_list *a;
-	a = malloc(sizeof(t_list));
 	t_list *b;
-	b = malloc(sizeof(t_list));
-	a->content = "mustafa";
-	b->content = "selam";
-	a->next = b;
-
-	printf("%s", a->next->content);
+	char *asd;
+	a = ft_lstnew("limon");
+	b = ft_lstnew("çilek");
+	asd = malloc(sizeof(t_list *));
+	asd = ft_lstlast(a)->content;
+	printf("%s", asd);
 }
 */
