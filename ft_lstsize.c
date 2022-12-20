@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 13:36:00 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/20 13:36:11 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/20 15:08:11 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-/*
-int main()
-{
-	t_list *a;
-	t_list *b;
-	
-	a = ft_lstnew("selam");
-	b = ft_lstnew("naber");
-	a->next = b;
-	printf("%d", ft_lstsize(a));
-}
-*/

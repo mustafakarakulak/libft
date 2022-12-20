@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 13:50:20 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/20 13:50:32 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/20 15:07:48 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free(temp);
 	}
 }
-/*
-void del(void *del)
-{
-	free(del);
-}
-int main()
-{
-	t_list *a;
-	t_list *b;
-	a = ft_lstnew("data");
-	b = ft_lstnew("data2");
-	a->next = b;
-	ft_lstclear(&a, del);
-}
-*/
