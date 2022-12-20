@@ -8,6 +8,8 @@ bo_dos	= $(b_dos:.c=.o)
 flags		=	-Wall -Wextra -Werror
 NAME		=	libft.a
 
+cc = gcc
+
 $(NAME):
 	gcc -c $(flags) $(c_dos)
 	ar rcs $(NAME) $(o_dos)
@@ -26,5 +28,9 @@ run:
 	@rm -f libft
 
 re: fclean all
+
+bonus: $(bo_dos)
+	@$(c) -c $(b_dos) $(flags)
+	@ar rcs $(NAME) $(bo_dos)
 
 .PHONY: all clean fclean re
