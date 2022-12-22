@@ -12,47 +12,54 @@
 
 #include "libft.h"
 
-static	int	ft_len(int n, int fflag)
+char	*truefalse(void)
 {
-	int	cont;
+	char	*ret;
 
-	cont = 0;
-	if (n == 0)
-		cont = 1;
-	while (n != 0)
+	ret = malloc(sizeof(char) * 2);
+	ret[0] = '0';
+	ret[1] = '\0';
+	return (ret);
+}
+
+int	ft_numlen(int nb)
+{
+	int	len;
+
+	len = 0;
+	if (nb < 0)
+		len++;
+	while (nb)
 	{
-		cont++;
-		n = n / 10;
+		nb = nb / 10;
+		len++;
 	}
-	if (fflag < 0)
-		cont++;
-	return (cont);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		lenn;
-	int		sign;
-	long	n2;
+	int			len;
+	char		*ret;
+	const char	*dig;
 
-	n2 = n;
-	if (n2 < 0)
-		sign = -1;
-	else
-		sign = 1;
-	n2 = sign * n2;
-	lenn = ft_len(n2, sign);
-	str = (char *)malloc(sizeof(char) * lenn + 1);
-	if (!str)
+	dig = "0123456789";
+	len = ft_numlen(n);
+	if (n == 0)
+		return (truefalse());
+	ret = malloc(sizeof(char) * (len + 1));
+	if (!ret)
 		return (0);
-	str[lenn] = '\0';
-	while (--lenn >= 0)
+	ret[len] = 0;
+	if (n < 0)
+		ret[0] = '-';
+	while (n)
 	{
-		str[lenn] = '0' + (n2 % 10);
-		n2 = n2 / 10;
+		if (n > 0)
+			ret[--len] = dig[n % 10];
+		else
+			ret[--len] = dig[n % 10 * -1];
+		n /= 10;
 	}
-	if (sign == -1)
-		str[0] = '-';
-	return (str);
+	return (ret);
 }
