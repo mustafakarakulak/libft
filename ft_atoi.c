@@ -12,31 +12,31 @@
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
-	long	i;
-	long	mult;
-	long	number;
+	int			i;
+	int			sign;
+	long int	nb;
 
+	sign = 1;
 	i = 0;
-	mult = 1;
-	number = 0;
-	if (nptr[0] == '\0')
-		return (i);
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\f' || \
-			nptr[i] == '\r' || nptr[i] == '\n' || nptr[i] == '\v')
+	nb = 0;
+	while (str[i] == 32 || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (nptr[i] == '-')
-			mult *= -1;
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
 	}
-	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		number = number * 10 + (nptr[i] - 48);
-		i++;
+		nb = (nb * 10) + str[i++] - 48;
+		if (nb > 2147483648 && sign == -1)
+			return (0);
+		if (nb > 2147483647 && sign == 1)
+			return (-1);
 	}
-	number *= mult;
-	return (number);
+	return ((int)nb * sign);
 }
