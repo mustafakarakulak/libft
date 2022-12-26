@@ -6,20 +6,19 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 13:51:09 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/20 15:07:55 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/25 10:05:55 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *list, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*list_ptr;
-
-	list_ptr = list;
-	while (list_ptr != NULL)
+	if (!lst && !f)
+		return ;
+	while (lst)
 	{
-		(*f)(list_ptr->content);
-		list_ptr = list_ptr->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }

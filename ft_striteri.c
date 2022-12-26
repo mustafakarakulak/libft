@@ -6,7 +6,7 @@
 /*   By: mkarakul <mkarakul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 14:01:18 by mkarakul          #+#    #+#             */
-/*   Updated: 2022/12/18 14:01:21 by mkarakul         ###   ########.fr       */
+/*   Updated: 2022/12/25 10:06:39 by mkarakul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	index;
+	unsigned int	i;
 
-	index = 0;
-	if (s == 0)
+	if (!s || !f)
 		return ;
-	while (s[index])
+	i = 0;
+	while (s[i])
 	{
-		(*f)(index, &s[index]);
-		index++;
+		f(i, s + i);
+		i++;
 	}
 }
